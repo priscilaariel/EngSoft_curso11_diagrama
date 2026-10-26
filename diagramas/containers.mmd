@@ -1,0 +1,19 @@
+flowchart LR
+    usuario["<b>Usuário</b><br/>[Pessoa: líder ou membro do time de Novas Tecnologias]<br/>Descreve o desafio e valida o desenho"]
+
+    subgraph sistema["Agente de Fluxos de IA Generativa [sistema]"]
+        interface["<b>Interface de conversa</b><br/>[Container: chat ou projeto, ver L1]<br/>Recebe o desafio e entrega as 7 seções de saída"]
+        prompt["<b>Prompt do agente</b><br/>[Container: arquivo Markdown versionado]<br/>Papel, regras invioláveis, formato de saída, ferramental disponível e exemplos"]
+        repo[("<b>Repositório de desenhos de fluxo</b><br/>[Container: Git com Markdown e Mermaid, ver L7]<br/>Guarda os desenhos validados e seus diagramas")]
+    end
+
+    llm["<b>Modelo de linguagem</b><br/>[Sistema externo, ver L2]<br/>Decompõe o processo, classifica as etapas e desenha o fluxo"]:::external
+    ferramentas["<b>Ferramentas dos fluxos desenhados</b><br/>[Sistemas externos: n8n, Griptape, ComfyUI, Runway, Frame.io, GCP, entre outros]<br/>Descritas nos desenhos, nunca acionadas pelo agente"]:::external
+
+    usuario -->|"Descreve o desafio"| interface
+    prompt -->|"Instruções de sistema (P1)"| interface
+    interface -->|"Envia mensagens e instruções"| llm
+    usuario -->|"Arquiva o desenho validado (P4)"| repo
+    usuario -.->|"Constrói os fluxos aprovados (fora do escopo)"| ferramentas
+
+    classDef external fill:#888,stroke:#444,color:#fff

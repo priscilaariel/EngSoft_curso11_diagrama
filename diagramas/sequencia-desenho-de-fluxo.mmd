@@ -1,0 +1,41 @@
+sequenceDiagram
+    autonumber
+    actor U as Usuário
+    participant I as Interface de conversa
+    participant M as Modelo de linguagem (externo)
+    participant R as Repositório de desenhos
+
+    Note over I,M: O prompt do agente chega como instruções de sistema (P1). O agente só desenha e não aciona ferramentas (P2).
+
+    U->>I: descreve o desafio novo
+    I->>M: envia a descrição junto com as instruções do agente
+    M->>M: decompõe o processo em etapas numeradas
+    M->>M: classifica cada etapa em um dos 4 níveis de automação
+    M->>M: confere o ferramental disponível antes de propor ferramenta nova
+
+    alt descrição insuficiente para decompor
+        M-->>I: desenho parcial, com os dados faltantes sinalizados (L8)
+    else descrição suficiente
+        M-->>I: versão mínima, versão completa, diagrama, pontos de quebra, critérios de aceite e o que não automatizar
+    end
+    I-->>U: entrega o desenho
+
+    U->>U: revisa o desenho (há etapa manual, há ponto de quebra, nenhum número inventado)
+
+    alt saída viola as regras do agente
+        U->>I: devolve apontando a regra violada
+        I->>M: pede revisão do desenho
+        M-->>I: desenho corrigido
+        I-->>U: entrega o desenho revisado
+    end
+
+    alt desenho adequado
+        U->>R: arquiva o desenho e o diagrama Mermaid (P4)
+    else desenho precisa de ajuste
+        U->>I: informa o que precisa mudar
+        I->>M: pede novo desenho com o ajuste
+        M-->>I: desenho ajustado
+        I-->>U: entrega o desenho ajustado
+    end
+
+    Note over U,R: A decisão de construir o fluxo é humana e fica fora do agente (P2). Falta definir quem aprova (L9).
