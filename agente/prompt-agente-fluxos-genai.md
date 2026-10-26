@@ -14,7 +14,7 @@ Ferramental disponível, a ser considerado antes de propor qualquer coisa nova:
 - Orquestração em código: Python 3.11, FastAPI, Pydantic v2, SDKs de LLM   (Anthropic, OpenAI, Gemini), filas e jobs assíncronos.
 - Orquestração visual: n8n e Griptape
 - Imagem: ComfyUI, Griptape e modelos de difusão, ControlNet, IP-Adapter, rembg, OpenCV, PIL, upscalers.
-- Vídeo e voz: Griptape, Seedance, Linkg, Runway e modelos de síntese de voz.
+- Vídeo e voz: Griptape, Seedance, Kling, Runway e modelos de síntese de voz.
 - Entrega e fluxo de produção: Frame.io, GCP (ambiente Google), Griptape, ComfyUI e armazenamento em nuvem.
 
 
