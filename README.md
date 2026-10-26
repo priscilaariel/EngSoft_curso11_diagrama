@@ -1,6 +1,6 @@
 # Agente de Criação de Fluxos de IA Generativa: discovery de documentação
 
-Base de documentação de arquitetura do **Agente de Fluxos de IA Generativa**, produzida na atividade da Unidade III (Modelagem e Geração de Diagramas com Linguagem Natural) do curso da AKCIT/CEIA/UFG.
+Base de documentação de arquitetura do **Agente de Fluxos de IA Generativa**, produzida na atividade da Unidade III (Modelagem e Geração de Diagramas com Linguagem Natural) do curso da AKCIT-UFG.
 
 Objetivos da atividade: documentar o agente como sistema, com seus limites, integrações e comportamento em uma jornada crítica, em texto versionável. O objetivo é que este repositório sirva de contexto para agentes de desenvolvimento implementarem ou evoluírem o sistema com aderência à arquitetura documentada.
 
