@@ -73,7 +73,7 @@ O Agente de Fluxos de IA Generativa é um assistente definido por um prompt de s
 |---|---|
 | F1 | O prompt do agente está definido e versionado em `agente/prompt-agente-fluxos-genai.md`: papel, 9 regras invioláveis, 7 seções de saída, 4 níveis de automação e 4 exemplos. |
 | F2 | Domínio de atuação: produção audiovisual e comunicação em empresa de mídia, com imagem, vídeo, voz e texto, VFX, stock shots, animações e apoio a pré e pós-produção. |
-| F3 | Ferramental declarado no prompt: Python 3.11, FastAPI, Pydantic v2, SDKs de LLM (Anthropic, OpenAI, Gemini), filas e jobs assíncronos, n8n, Griptape, ComfyUI, modelos de difusão, ControlNet, IP-Adapter, rembg, OpenCV, PIL, upscalers, Seedance, Linkg, Runway, síntese de voz, Frame.io, GCP e armazenamento em nuvem. |
+| F3 | Ferramental declarado no prompt: Python 3.11, FastAPI, Pydantic v2, SDKs de LLM (Anthropic, OpenAI, Gemini), filas e jobs assíncronos, n8n, Griptape, ComfyUI, modelos de difusão, ControlNet, IP-Adapter, rembg, OpenCV, PIL, upscalers, Seedance, Kling, Runway, síntese de voz, Frame.io, GCP e armazenamento em nuvem. |
 | F4 | A saída do agente é em Markdown e inclui um diagrama do fluxo em Mermaid. |
 
 ### Premissas assumidas (a confirmar)
